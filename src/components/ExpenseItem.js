@@ -1,16 +1,17 @@
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
+import Card from "./Card";
 
 //component
 function ExpenseItem(props) {
   return (
-    <div className="expense-item">
-      {/* .toISOString() : a built in method available on all date objs */}
-      <div>{props.date.toISOString()}</div>
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
