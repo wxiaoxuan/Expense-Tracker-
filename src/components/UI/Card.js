@@ -2,7 +2,7 @@
 
 import './Card.css';
 
-function Card(props) {
+const Card = (props) => {
     const classes = 'card ' + props.className;
     // props.children is a reserve name and the value of this prop will always be the content btw opening and closing tags 
     return <div className={classes}>{props.children}</div>
